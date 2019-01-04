@@ -1,0 +1,20 @@
+type Approvement {
+  id: ID
+  message: String
+  hasError: Boolean
+}
+
+input AccountInput {
+  id: ID
+  lastname: String
+  firstname: String
+  middlename: String
+  avatar: String
+  email: String
+  phone: String
+}
+
+type Mutation {
+  addAccount(account: AccountInput): Account
+  removeAccount(account: AccountInput): Approvement
+}

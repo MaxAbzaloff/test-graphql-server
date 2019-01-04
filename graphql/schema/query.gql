@@ -1,0 +1,18 @@
+type Account {
+  id: ID
+  lastname: String
+  firstname: String
+  middlename: String
+  avatar: String
+  email: String
+  phone: String
+}
+
+type Accounts {
+  pagesAmount: Int
+  accounts: [Account]
+}
+
+type Query {
+  getAccounts(perPage: Int, page: Int): Accounts
+}
